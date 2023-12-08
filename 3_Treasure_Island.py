@@ -24,7 +24,7 @@ choice1=input('you\'re at $ symbol, where do you want to go? Type "left" or "rig
 if choice1=="left":
   choice2 = input('you\'ve come to lake. There is an island in the middle of the lake. Type "wait" to wait for a boat OR type "swim" to swim across\n').lower()
   if choice2 == "wait":
-    choice3 = input("You have arrived at the island unharmed. There is a house with doors of dstinct colours red, blue and yellow which colour will you choose?\n")
+    choice3 = input("You have arrived at the island unharmed. There is a house with doors of dstinct colours red, blue and yellow which colour will you choose?\n").lower()
     if choice3 == "red":
       print("It's a room full of fire. GAME OVER!")
       
