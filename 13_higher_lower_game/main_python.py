@@ -39,7 +39,6 @@ def higher_lower():
             score += 1
             print('you\'re right! and your current score ', score)
             n1 = n2
-
             n2 = random_celeb(n=n1)
         elif (user_answer == 'a' and not compare_followers(pos1=n1, pos2=n2)) or (user_answer == 'b' and not compare_followers(pos1=n2, pos2=n1)):
             print('you are wrong and your score ', score)
