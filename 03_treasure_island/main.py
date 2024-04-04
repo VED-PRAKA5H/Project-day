@@ -1,4 +1,4 @@
-#from "ascii.co.uk/art" we take below ascii art
+# from "ascii.co.uk/art" we take below ascii art
 print('''*******************************************************************************
           |                   |                  |                     |
  _________|________________.=""_;=.______________|_____________________|_______
@@ -20,25 +20,29 @@ ____$______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 /______/______/______/______/______/______/______/______/______/______/________
 *******************************************************************************''')
 print("Welcome to treasure Island!")
-choice1=input('you\'re at $ symbol, where do you want to go? Type "left" or "right".\n').lower()
-if choice1=="left":
-  choice2 = input('you\'ve come to lake. There is an island in the middle of the lake. Type "wait" to wait for a boat OR type "swim" to swim across\n').lower()
-  if choice2 == "wait":
-    choice3 = input("You have arrived at the island unharmed. There is a house with doors of dstinct colours red, blue and yellow which colour will you choose?\n").lower()
-    if choice3 == "red":
-      print("It's a room full of fire. GAME OVER!")
-      
-    elif choice3 == "yellow":
-      print("You found the treasure : YOU WIN!")
-    
-    elif choice3 == "blue":
-      print("You drown in the water well. GAME OVER!") 
-      
-    else :
-      print("You enter a room full of beasts. GAME OVER!")
-     
-  else:
-    print("Yougot attacked by an angry trouts. GAME OVER!")
+choice1 = input('you\'re at $ symbol, where do you want to go? Type "left" or "right".\n').lower()
+if choice1 == "left":
+    choice2 = input(
+        'you\'ve come to lake. There is an island in the middle of the lake. Type "wait" to wait for a boat OR type '
+        '"swim" to swim across\n').lower()
+    if choice2 == "wait":
+        choice3 = input(
+            "You have arrived at the island unharmed. There is a house with doors of distinct colours red, "
+            "blue and yellow which colour will you choose?\n").lower()
+        if choice3 == "red":
+            print("It's a room full of fire. GAME OVER!")
+
+        elif choice3 == "yellow":
+            print("You found the treasure : YOU WIN!")
+
+        elif choice3 == "blue":
+            print("You drown in the water well. GAME OVER!")
+
+        else:
+            print("You enter a room full of beasts. GAME OVER!")
+
+    else:
+        print("You got attacked by an angry trouts. GAME OVER!")
 
 else:
-  print("You fell in a hole. GAME OVER!")
+    print("You fell in a hole. GAME OVER!")
