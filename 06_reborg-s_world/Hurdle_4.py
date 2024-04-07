@@ -1,7 +1,9 @@
 def turn_right():
     turn_left()
     turn_left()
-    turn_left()   
+    turn_left()
+
+
 while at_goal() is False:
     if front_is_clear() is not True:
         if right_is_clear() is True:
