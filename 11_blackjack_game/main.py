@@ -1,3 +1,4 @@
+import random
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 
 
@@ -10,25 +11,32 @@ def win_status(user_cards, bot_cards):
             bot_cards.remove(11)
             bot_cards.append(1)
     if bot_cards[0]+bot_cards[1] == 21 and user_cards[0]+user_cards[1] != 21:
-        print(f"your cards: {user_cards} and your score {sum(user_cards)}.\ncomputer's cards is: {bot_cards} and computer score {sum(bot_cards)}")
+        print(f"your cards: {user_cards} and your score {sum(user_cards)}.\n"
+              f"computer's cards is: {bot_cards} and computer score {sum(bot_cards)}")
         print('YOU LOST,Opponent has BLACKJACK.')
     elif user_cards[0]+user_cards[1] == 21 and bot_cards[0]+bot_cards[1] != 21:
-        print(f"your cards: {user_cards} and your score {sum(user_cards)}.\ncomputer's cards is: {bot_cards} and computer score {sum(bot_cards)}")
+        print(f"your cards: {user_cards} and your score {sum(user_cards)}.\n"
+              f"computer's cards is: {bot_cards} and computer score {sum(bot_cards)}")
         print('YOU ARE BLACKJACK.')
     elif sum(user_cards) > 21:
-        print(f"your cards: {user_cards} and your score {sum(user_cards)}.\ncomputer's cards is: {bot_cards[:2]} and computer score {bot_cards[0]+bot_cards[1]}")
+        print(f"your cards: {user_cards} and your score {sum(user_cards)}.\n"
+              f"computer's cards is: {bot_cards[:2]} and computer score {bot_cards[0]+bot_cards[1]}")
         print("YOU LOST.")
     elif sum(bot_cards) > 21:
-        print(f"your cards: {user_cards} and your score {sum(user_cards)}.\ncomputer's cards is: {bot_cards} and computer score {sum(bot_cards)}")
+        print(f"your cards: {user_cards} and your score {sum(user_cards)}.\n"
+              f"computer's cards is: {bot_cards} and computer score {sum(bot_cards)}")
         print("YOU WIN.")
     elif sum(user_cards) > sum(bot_cards):
-        print(f"your cards: {user_cards} and your score {sum(user_cards)}.\ncomputer's cards is: {bot_cards} and computer score {sum(bot_cards)}")
+        print(f"your cards: {user_cards} and your score {sum(user_cards)}.\n"
+              f"computer's cards is: {bot_cards} and computer score {sum(bot_cards)}")
         print('YOU WIN.')
     elif sum(user_cards) == sum(bot_cards):
-        print(f"your cards: {user_cards} and your score {sum(user_cards)}.\ncomputer's cards is: {bot_cards} and computer score {sum(bot_cards)}")
+        print(f"your cards: {user_cards} and your score {sum(user_cards)}.\n"
+              f"computer's cards is: {bot_cards} and computer score {sum(bot_cards)}")
         print('GAME DRAW.')
     elif sum(user_cards) < sum(bot_cards):
-        print(f"your cards: {user_cards} and your score {sum(user_cards)}.\ncomputer's cards is: {bot_cards} and computer score {sum(bot_cards)}")
+        print(f"your cards: {user_cards} and your score {sum(user_cards)}.\n"
+              f"computer's cards is: {bot_cards} and computer score {sum(bot_cards)}")
         print('YOU LOST.')
 
 
@@ -79,5 +87,3 @@ while want_to_play:
     else:
         black_jack()
 
-
-  
