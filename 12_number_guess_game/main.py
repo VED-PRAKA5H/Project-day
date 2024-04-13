@@ -8,7 +8,7 @@ attempts = 10 if level == 'easy' else 5
 number = randint(1, 100)
 
 
-def game(n, actual_number=number):
+def game(n):
     remaining_attempts = n
     ans = int(input(f"you have {remaining_attempts} attempts remaining.\nMake a guess: "))
     if ans == number:
