@@ -28,7 +28,7 @@ def make_coffee(coffee_name):
     pennies = int(input("how many pennies?: "))
     given_money = quarters * 0.25 + dimes * 0.10 + nickles * 0.05 + pennies * 0.01
     if given_money > MENU[coffee_name]['cost']:
-        print(f"Here is ${round(given_money-MENU[coffee_name]['cost'],2)} in change.")
+        print(f"Here is ${round(given_money-MENU[coffee_name]['cost'], 2)} in change.")
         print(f'Here is your {coffee_name} ☕️. Enjoy!')
         global money
         money += MENU[coffee_name]["cost"]
