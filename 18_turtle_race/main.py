@@ -1,5 +1,7 @@
+import random
+import turtle
 from turtle import Turtle, Screen
-import random, turtle
+
 screen1 = Screen()
 my_object1 = Turtle()
 my_object2 = Turtle()
@@ -24,7 +26,7 @@ my_object.right(90)
 my_object.pendown()
 my_object.fd(800)
 user = screen1.textinput('who will win?', "which turtle will win?")
-turtle.listen(1,0)
+turtle.listen(1, 0)
 
 while True:
     my_object1.forward(random.randint(5, 10))
@@ -32,7 +34,8 @@ while True:
     my_object3.forward(random.randint(5, 10))
     my_object4.forward(random.randint(5, 10))
     my_object5.forward(random.randint(5, 10))
-    if my_object1.xcor() >= 690 or my_object2.xcor() >= 690 or my_object3.xcor() >= 690 or my_object4.xcor() >= 690 or my_object5.xcor() >= 690:
+    if (my_object1.xcor() >= 690 or my_object2.xcor() >= 690 or
+            my_object3.xcor() >= 690 or my_object4.xcor() >= 690 or my_object5.xcor() >= 690):
         break
 dead_line = 690
 color = my_object1.color()
@@ -48,4 +51,3 @@ for objects in [my_object1, my_object2, my_object3, my_object4, my_object5]:
         screen1.textinput(winner, 'enter ok to exit')
 
 screen1.exitonclick()
-
