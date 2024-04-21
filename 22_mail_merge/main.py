@@ -4,13 +4,13 @@ directory = './Output/ReadyToSend'
 if not os.path.exists(directory):
     os.makedirs(directory)
 
-with open('./Input/Letters/starting_letter.txt') as file:
+with open('Input/Letters/starting_letter.txt') as file:
     letter = file.read()
-with open('./Input/Names/invited_names.txt') as f:
+with open('Input/Names/invited_names.txt') as f:
     x = f.read()
     y = x.split('\n')
     for name in y:
-        with open('./Input/Letters/starting_letter.txt') as file:
+        with open('Input/Letters/starting_letter.txt') as file:
             file_path = f'{directory}/letter_for_{name}.txt'
             new_letter = letter.replace('[name]', name)
             with open(file_path, "w") as file1:
