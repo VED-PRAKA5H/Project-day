@@ -16,9 +16,7 @@ with open('Input/Names/invited_names.txt') as f:
             with open(file_path, "w") as file1:
                 file1.write(new_letter)
 
-
-
-                    ##################################### METHOD 2#########################################
+# #################################### METHOD 2#########################################
 #
 # PLACEHOLDER = "[name]"
 #
@@ -33,5 +31,3 @@ with open('Input/Names/invited_names.txt') as f:
 #         new_letter = letter_contents.replace(PLACEHOLDER, stripped_name)
 #         with open(f"./Output/ReadyToSend/letter_for_{stripped_name}.txt", mode="w") as completed_letter:
 #             completed_letter.write(new_letter)
-
-  
