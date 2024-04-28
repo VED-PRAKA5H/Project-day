@@ -12,6 +12,7 @@ LONG_BREAK_MIN = 20
 reps = 0
 timer = None
 
+
 # ---------------------------- TIMER RESET ------------------------------- #
 
 def reset_timer():
@@ -23,6 +24,7 @@ def reset_timer():
     reps = 0
     label_timer.config(text="Timer")
     label_checkmark.config(text="")
+
 
 # ---------------------------- TIMER MECHANISM ------------------------------- #
 
@@ -61,6 +63,7 @@ def count_down(count):
         marks = "✔" * (reps // 2)
         label_checkmark.config(text=marks)
         start_timer()
+
 
 # ---------------------------- UI SETUP -------------------------------
 
