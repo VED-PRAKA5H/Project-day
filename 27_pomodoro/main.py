@@ -1,5 +1,4 @@
 from tkinter import *
-import math
 
 # ---------------------------- CONSTANTS ------------------------------- #
 PINK = "#e2979c"
@@ -13,77 +12,72 @@ LONG_BREAK_MIN = 20
 reps = 0
 timer = None
 
-
 # ---------------------------- TIMER RESET ------------------------------- #
 
 def reset_timer():
-    window.after_cancel(timer)
+    global reps, timer
+    if timer:
+        window.after_cancel(timer)
+        timer = None
     canvas.itemconfig(timer_text, text="00:00")
-    global reps
     reps = 0
-    label_timer.config(text="TIMER")
+    label_timer.config(text="Timer")
     label_checkmark.config(text="")
 
+# ---------------------------- TIMER MECHANISM ------------------------------- #
 
-# ---------------------------- TIMER MECHANISM ------------------------------- # 
 def start_timer():
-    global reps
-    work_sec = WORK_MIN * 60
-    shortbreak_sec = SHORT_BREAK_MIN * 60
-    longbreak_sec = LONG_BREAK_MIN * 60
+    global reps, timer
+
+    # Cancel the existing timer if one is running
+    if timer:
+        window.after_cancel(timer)
+
     reps += 1
 
-    if reps % 2 == 1:
-        count_down(shortbreak_sec)
-        label_timer.config(text="WORK TIME", fg=GREEN)
-
-    elif reps % 2 == 0 and reps <= 6:
-        label_timer.config(text="SHORT BREAK", fg=PINK)
-        count_down(longbreak_sec)
-
-    elif reps % 8 == 0:
+    if reps % 8 == 0:
+        count_down(LONG_BREAK_MIN * 60)
         label_timer.config(text="LONG BREAK", fg=RED)
-        count_down(48)
+    elif reps % 2 == 0:
+        count_down(SHORT_BREAK_MIN * 60)
+        label_timer.config(text="SHORT BREAK", fg=PINK)
+    else:
+        count_down(WORK_MIN * 60)
+        label_timer.config(text="WORK TIME", fg=GREEN)
 
 
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
 
 
 def count_down(count):
-    count_min = math.floor(count / 60)
+    count_min = count // 60
     count_sec = count % 60
-    canvas.itemconfig(timer_text, text=f"{"{:02d}".format(count_min)}:{"{:02d}".format(count_sec)}")
+    canvas.itemconfig(timer_text, text=f"{count_min:02d}:{count_sec:02d}")
+
     if count > 0:
         global timer
         timer = window.after(1000, count_down, count - 1)
     else:
-        start_timer()
-        marks = "      ✔"
-        work_sessions = math.floor(reps / 2)
-        for _ in range(work_sessions):
-            marks += "✔"
-        print(marks)
+        marks = "✔" * (reps // 2)
         label_checkmark.config(text=marks)
-
+        start_timer()
 
 # ---------------------------- UI SETUP -------------------------------
 
 window = Tk()
-window.title("POMODORO")
-window.minsize(width=400, height=400)
+window.title("Pomodoro Timer")
 window.config(padx=50, pady=50, bg=YELLOW)
-window.eval('tk::PlaceWindow . right')  # to place a window on the screen center in Tkinter
 
 image = PhotoImage(file="tomato.png")
 
-canvas = Canvas(width=205, height=226, )
-canvas.config(bg=YELLOW)
-canvas.config(highlightthickness=0)  # to remove border of an image
+canvas = Canvas(width=205, height=226, bg=YELLOW, highlightthickness=0)
 canvas.create_image(104, 114, image=image)
-timer_text = canvas.create_text(104, 138, text="00:00", font=("New Roman", 20, 'bold'))
+timer_text = canvas.create_text(104, 138, text="00:00", font=(FONT_NAME, 20, 'bold'))
 canvas.grid(row=1, column=1)
-label_timer = Label(text="Timer", bg=YELLOW, fg=GREEN, font=("Courier", 25, 'bold'))
+
+label_timer = Label(text="Timer", bg=YELLOW, fg=GREEN, font=(FONT_NAME, 25, 'bold'))
 label_timer.grid(row=0, column=1)
+
 label_checkmark = Label(text="", bg=YELLOW, fg="#FF6969", font=("Ariel", 25, 'bold'))
 label_checkmark.grid(row=3, column=1)
 
