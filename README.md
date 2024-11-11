@@ -83,15 +83,6 @@ pip install turtle
 
 ## Project 20: The Pong Game
     Play the classic Pong game.
-we will make this game in 8 parts.
-* create the screen
-* create and move a paddle
-* create another paddle
-* create the ball and make it move
-* detect collision with wall and bounce
-* detect collision with paddle
-* detect when paddle misses
-* keep score
 
 ## Project 21: Turtle Crossing Game
     Help a turtle cross the road safely.
