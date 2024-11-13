@@ -3,7 +3,7 @@ from tkinter import *
 from tkinter import messagebox
 YELLOW = "#f7f5dd"
 FONT_NAME = "Ariel"
-
+import json
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
 
@@ -26,19 +26,43 @@ def save_password():
         messagebox.showinfo(title="Oops🚫", message="Left something!!")
 
     else:
-        row = entry1.get() + "    |    " + entry2.get() + "    |    " + entry3.get() + "\n"
         yes = messagebox.askyesno(title="Confirmation!!",
                                   message=f"Do you want to save following credentials?\nWebsite: {entry1.get()}"
                                           f"\nEmail: {entry2.get()}\nPassword: {entry3.get()}")
         if yes:
+            new_data = {entry1.get(): {"email": entry2.get(), "password": entry3.get()}}
             try:
-                with open("passwords.txt", "a") as file:
-                    file.write(row)
+                with open("passwords.json", "r") as file:
+                    # Reading the old data
+                    data = json.load(file)
+                    # Updating old data
+                    data.update(new_data)
+                with open('passwords.json', "w") as file:
+                    # Saving updated data
+                    json.dump(data, file, indent=4)
             except FileNotFoundError:
-                with open("passwords.txt", "w") as file:
-                    file.write(row)
-            entry3.delete(0, END)
-            entry1.delete(0, END)
+                with open("passwords.json", "w") as file:
+                    json.dump({entry1.get(): {"email": entry2.get(), "password": entry3.get()}}, file, indent=4)
+
+            finally:
+                entry3.delete(0, END)
+                entry1.delete(0, END)
+
+# ---------------------------- SHOW PASSWORD ------------------------------- #
+
+
+def show_password():
+    try:
+        with open("passwords.json", "r") as file:
+            data = json.load(file)
+            if entry1.get() in data:
+                messagebox.showinfo(title=entry1.get(), message=f"email: {data[entry1.get()]["email"]}\n"
+                                                                      f"password: {data[entry1.get()]["password"]}")
+            else:
+                messagebox.showinfo(title="Oops", message="Password not found")
+    except FileNotFoundError:
+        messagebox.showinfo(title="Error", message="No Password found")
+
 
 # ---------------------------- UI SETUP ------------------------------- #
 
@@ -55,10 +79,10 @@ canvas.grid(row=0, column=1)
 
 label1 = Label(text="Website:")
 label1.grid(row=1, column=0)
-entry1 = Entry(width=70)
+entry1 = Entry(width=49)
 entry1.insert(0, "groww.com")
 entry1.focus()    # send cursor to entry box
-entry1.grid(row=1, column=1, columnspan=3)
+entry1.grid(row=1, column=1)
 
 label2 = Label(text="Email/Username:")
 label2.grid(row=2, column=0)
@@ -76,5 +100,8 @@ generate_btn.grid(row=3, column=2)
 
 add_btn = Button(text="Add", bg="#9bdeac", font=("Ariel", 10), width=52, command=save_password)
 add_btn.grid(row=4, column=1, columnspan=3)
+
+search_btn = Button(text="Search", bg="#9bdeac", font=("Ariel", 10), width=13, command=show_password)
+search_btn.grid(row=1, column=2)
 
 window.mainloop()
