@@ -112,13 +112,18 @@ Download data from here:
 ## Project 27: Pomodoro
     Use the Pomodoro Technique for time management.
 
-## Project 27: Password Manager
+## Project 28: Password Manager
     Save your personal password/login credential.
 * **Tkinter**
 * **Used package**: [Pyperclip](https://pypi.org/project/pyperclip/) for copy and paste clipboard functions.
 
+## Project 29: Flash card App
+    Learn Hindi to English by flash cards.
+* **Tkinter**
+* **Pandas**
+
+
 ---
-git
 ## Contributing
 
 [//]: # (Feel free to contribute by enhancing the game logic or adding new features.)
