@@ -122,6 +122,12 @@ Download data from here:
 * **Tkinter**
 * **Pandas**
 
+## Project 30: Random Quote messanger
+    Email quotes to your friends using `smtplib` on current date.
+* **[SMTPlib](https://docs.python.org/3/library/smtplib.html)**
+* Create `.env` file and save you email and password in it for security purposes.
+
+
 
 ---
 ## Contributing
