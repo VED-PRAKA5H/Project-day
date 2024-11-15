@@ -25,7 +25,7 @@ with smtplib.SMTP('smtp.gmail.com') as connection:
     connection.login(user=my_email,
                      password=password)
     connection.sendmail(from_addr=my_email,
-                        to_addrs="ved38599@gmail.com",
+                        to_addrs="ved@gmail.com",
                         msg=message
                         )
 
