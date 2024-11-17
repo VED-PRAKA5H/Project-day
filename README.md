@@ -127,6 +127,11 @@ Download data from here:
 * **[SMTPlib](https://docs.python.org/3/library/smtplib.html)**
 * Create `.env` file and save you email and password in it for security purposes.
 
+## Project 31: Birthday Wisher
+    Automatically wishes who has birthday on current date
+* **[SMTPlib](https://docs.python.org/3/library/smtplib.html)**
+* Create `.env` file and save you email and password in it for security purposes.
+
 
 
 ---
