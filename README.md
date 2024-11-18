@@ -56,7 +56,8 @@ Get your art from here
 
 ## Project 16: Quiz Game
     Answer questions to test your knowledge.
-Get your question and answer from here [OpenTriviaDB](https://opentdb.com/)
+- Get your question and answer from here [OpenTriviaDB](https://opentdb.com/)
+- Updated data.py to question from API
 
 ## Project 17: The Hirst Painting Project
     Generate art similar to Damien Hirst's spot paintings.
@@ -132,10 +133,6 @@ Download data from here:
 * **[SMTPlib](https://docs.python.org/3/library/smtplib.html)**
 * Create `.env` file and save you email and password in it for security purposes.
 
-## Project 32: Kanye Quotes
-    Random Kanye quotes using API.
-* **API**: https://api.kanye.rest/
-* **Tkinter**
 
 
 
