@@ -132,6 +132,11 @@ Download data from here:
 * **[SMTPlib](https://docs.python.org/3/library/smtplib.html)**
 * Create `.env` file and save you email and password in it for security purposes.
 
+## Project 32: Kanye Quotes
+    Random Kanye quotes using API.
+* **API**: https://api.kanye.rest/
+* **Tkinter**
+
 
 
 ---
