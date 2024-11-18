@@ -1,3 +1,6 @@
+import html
+
+
 class QuizBrain:
     def __init__(self, question_list):
         self.questionnumber = 0
@@ -12,7 +15,9 @@ class QuizBrain:
 
     def next_question(self):
         current_question = self.questionlist[self.questionnumber]
-        user_answer = input(f'Q{self.questionnumber +1}. {current_question.text} (True/False): ')
+        # escape the HTML Character Entigit ties from question's text which came from API
+        question = html.unescape(current_question.text)
+        user_answer = input(f'Q{self.questionnumber + 1}. {question} (True/False): ')
         self.check_answer(user_answer, current_question.answer)
         self.questionnumber += 1
 
