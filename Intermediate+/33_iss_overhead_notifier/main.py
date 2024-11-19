@@ -13,6 +13,7 @@ receiver_email = os.getenv("RECEIVER_EMAIL")
 MY_LAT = 25.3356491  # Your latitude
 MY_LONG = 83.0076292  # Your longitude
 
+
 def is_iss_near_me():
     try:
         iss_response = requests.get(url="http://api.open-notify.org/iss-now.json", timeout=10)
@@ -26,6 +27,7 @@ def is_iss_near_me():
     except Exception as e:
         print(f"Error checking ISS location: {e}")
         return False
+
 
 def is_dark():
     parameters = {
@@ -47,6 +49,7 @@ def is_dark():
         print(f"Error checking sunrise/sunset data: {e}")
         return False
 
+
 def send_alert():
     try:
         with smtplib.SMTP("smtp.gmail.com") as connection:
@@ -55,11 +58,13 @@ def send_alert():
             connection.sendmail(
                 from_addr=my_email,
                 to_addrs=receiver_email,
-                msg="Subject: Look up!\n\nThe ISS is overhead and it's dark enough to see it. Go outside and enjoy the view!"
+                msg="Subject: Look up!\n\nThe ISS is overhead and it's dark enough to see it."
+                    " Go outside and enjoy the view!"
             )
             print("Email sent! 🚀")
     except Exception as e:
         print(f"Error sending email: {e}")
+
 
 # Run every 60 seconds
 count = 0
