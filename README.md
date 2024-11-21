@@ -145,6 +145,13 @@ Download data from here:
 * **Longitude and Latitude**:  [LatLong](https://www.latlong.net/)
 * **Sunrise and sunset**: [API](https://sunrise-sunset.org/api)
 
+## Project 34: Quizzler App
+    Learn from quizes (taking questions using API).
+* **[Open trvia db API](https://opentdb.com/api_config.php)**
+* **Tkinter**
+* **html**: a python to [Unescape] characters. 
+* Online html [unescape/escape](https://www.w3schools.com/html/html_entities.asp): [Free Formatter](https://www.freeformatter.com/html-escape.html)
+
 
 ---
 ## Contributing
