@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog-{{post_number}}</title>
+    <link href='https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap' rel="stylesheet" />
+    <link rel="stylesheet" href="../static/css/post.css">
+    <link rel="icon" href="../static/images/favicon.png">
+</head>
+<body>
+     {% for post in posts %}
+      {% if post.id == post_number %}
+        <div class="wrapper">
+
+                <div class="top">
+                    <div class="title"><h1>{{ post.title }}</h1></div>
+                </div>
+                <div class="content">
+                    <div class="card">
+                            <h2>{{ post.subtitle }}</h2>
+                            <p>{{ post.body }}</p>
+                        <a href="{{ url_for('home') }}">Goto Home</a>
+                    </div>
+                </div>
+
+        </div>
+     {% endif %}
+    {% endfor %}
+
+</body>
+<footer><p>Copyright © {{ year }} built by VED PRAKASH.</p></footer>
+
+</html>
