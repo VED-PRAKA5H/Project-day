@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="39e44971-7082-4d62-8cc6-6625578431c3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/24_data_analysis_on_squirrel_census/2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24_data_analysis_on_squirrel_census/pandas_analyis.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24_data_analysis_on_squirrel_census/weather_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24_nato_alphabet/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24_nato_alphabet/nato_phonetic_alphabet.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/25_mile_to_kilometers/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/26_pomodoro/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/26_pomodoro/tomato.png" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2tR5eIsBdfgxs0eY1WYboaLv71I" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.logo.executor": "Run",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Merging main",
+    "last_opened_file_path": "D:/PROGRAMMING/manim"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-7a29c1521ef0-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.11799.298" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="39e44971-7082-4d62-8cc6-6625578431c3" name="Changes" comment="" />
+      <created>1740302139638</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1740302139638</updated>
+    </task>
+    <servers />
+  </component>
+</project>
