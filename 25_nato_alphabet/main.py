@@ -1,4 +1,5 @@
 import pandas
+# Load the data
 df = pandas.read_csv("nato_phonetic_alphabet.csv")
 # TODO 1: create a dictionary in format {column1_data1: column2_data1, ...}
 
