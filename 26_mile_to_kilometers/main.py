@@ -26,6 +26,7 @@ label_ans.config(pady=20, padx=20)
 
 
 def calc():
+    """perform the calculation"""
     x = int(entry.get())
     label_ans.config(text=str("{:.2f}".format(x*1.60934)))
 
