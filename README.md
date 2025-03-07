@@ -1,6 +1,6 @@
 # Project Overview
 
-This repository contains a collection of projects, each designed to demonstrate different programming concepts and skills. Below is a list of all projects with brief descriptions.
+This repository contains a collection of projects, each designed to demonstrate different programming concepts and skills. Below is a list of all projects with brief descriptions.\
 **Language used: Python**\
 [Pycharm Shortcuts](https://www.jetbrains.com/help/pycharm/mastering-keyboard-shortcuts.html?keymap=secondary_windows#advanced-features)
 ## Project List
