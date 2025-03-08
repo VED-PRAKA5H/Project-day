@@ -14,5 +14,3 @@ while True:
         break
     except KeyError:
         print("Sorry only letter in the alphabet please.")
-
-
