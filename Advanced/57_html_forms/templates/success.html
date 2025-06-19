@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Registration Success</title>
+    <link rel="stylesheet" href="../static/style.css" />
+</head>
+<body>
+    <div class="container">
+        <!-- Header consistent with the form header style -->
+        <div class="form-header">
+            <h1>🎉 Registration Successful!</h1>
+            <p>Thank you for registering. We've received your information.</p>
+        </div>
+
+        <!-- Content section styled like form-section -->
+        <div class="form-content">
+            <div class="form-section" style="text-align:center;">
+                <p>Your registration was successful. You can register another user or return to the homepage.</p>
+
+                <!-- Button to go back to home/registration form -->
+                <a href="{{ url_for('home') }}" class="btn-secondary" style="display:inline-block; margin-top: 20px;">
+                    Register Another User
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="form-footer">
+            <p>Your information is secure and protected.</p>
+        </div>
+    </div>
+</body>
+</html>
