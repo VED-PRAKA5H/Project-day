@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Modern HTML Forms</title>
+    <link rel="stylesheet" href="../static/style.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="form-header">
+            <h1>Registration Form</h1>
+            <p>Join our community with this beautiful form</p>
+        </div>
+
+        <div class="form-content">
+            <form id="registrationForm" action="{{ url_for('login') }}" method="post">
+                <div class="form-section">
+                    <h2 class="section-title">Personal Information</h2>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input
+                                type="text"
+                                id="firstName"
+                                name="firstName"
+                                required
+                                autocomplete="given-name"
+                                placeholder="Enter your first name"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input
+                                type="text"
+                                id="lastName"
+                                name="lastName"
+                                required
+                                autocomplete="family-name"
+                                placeholder="Enter your last name"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                            autocomplete="email"
+                            placeholder="example@domain.com"
+                        />
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                autocomplete="tel"
+                                aria-describedby="phoneHelp"
+                                placeholder="+91 98765 43210"
+                            />
+                            <small id="phoneHelp">Optional, include country code.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="birthdate">Date of Birth</label>
+                            <input type="date" id="birthdate" name="birthdate" autocomplete="bday" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2 class="section-title">Address Details</h2>
+
+                    <div class="form-group">
+                        <label for="address">Street Address</label>
+                        <input
+                            type="text"
+                            id="address"
+                            name="address"
+                            autocomplete="street-address"
+                            placeholder="Varanasi"
+                        />
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city" autocomplete="address-level2" />
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <select id="country" name="country" autocomplete="country-name">
+                                <option value="">Select Country</option>
+                                <option value="us">India</option>
+                                <option value="uk">United Kingdom</option>
+                                <option value="ca">Canada</option>
+                                <option value="au">Australia</option>
+                                <option value="in">United States</option>
+                                <option value="de">Germany</option>
+                                <option value="fr">France</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2 class="section-title">Preferences & Interests</h2>
+
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <div class="radio-group">
+                            <div class="radio-item">
+                                <input type="radio" id="male" name="gender" value="male" />
+                                <label for="male">Male</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="female" name="gender" value="female" />
+                                <label for="female">Female</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="other" name="gender" value="other" />
+                                <label for="other">Other</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Interests (Select all that apply)</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="tech" name="interests[]" value="technology" />
+                                <label for="tech">Technology</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="sports" name="interests[]" value="sports" />
+                                <label for="sports">Sports</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="music" name="interests[]" value="music" />
+                                <label for="music">Music</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="travel" name="interests[]" value="travel" />
+                                <label for="travel">Travel</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="cooking" name="interests[]" value="cooking" />
+                                <label for="cooking">Cooking</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2 class="section-title">Additional Information</h2>
+
+                    <div class="form-group">
+                        <label for="bio">Bio / About Yourself</label>
+                        <textarea id="bio" name="bio" placeholder="Tell us about yourself..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="website">Personal Website</label>
+                        <input
+                            type="url"
+                            id="website"
+                            name="website"
+                            placeholder="https://your-website.com"
+                            autocomplete="url"
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="newsletter" name="newsletter" value="yes" />
+                            <label for="newsletter">Subscribe to our newsletter</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input
+                                type="checkbox"
+                                id="terms"
+                                name="terms"
+                                value="yes"
+                                required
+                            />
+                            <label for="terms">I agree to the Terms and Conditions *</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button type="reset" class="btn-secondary">Reset Form</button>
+                    <button type="submit" class="btn-primary">Submit Registration</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-footer">
+            <p>
+                All fields marked with * are required. Your information is secure and protected.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
