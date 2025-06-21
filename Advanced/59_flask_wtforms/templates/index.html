@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %} home {% endblock %}
+
+
+{% block h1 %}Welcome{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h2>Welcome to Home Page</h2>
+    <p>Are you ready to discover my secret?</p>
+    <a class="btn btn-primary btn-lg" href=" {{ url_for('submit') }} "
+    >Goto Login Page</a
+    >
+</div>
+{% endblock %}
