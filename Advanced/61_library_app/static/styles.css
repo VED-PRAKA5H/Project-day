@@ -1,0 +1,103 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 0 15px;
+    background: #f7f7f7;
+    color: #333;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+/* Links */
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Ordered List for Books */
+ol {
+    padding-left: 20px;
+}
+ol > li {
+    background: #fff;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+/* Inner details list */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Buttons and Links as Buttons */
+button, .btn {
+    background-color: #3498db;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover, .btn:hover {
+    background-color: #2980b9;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+label {
+    font-weight: bold;
+}
+input {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+/* Book row flex */
+.book-row {
+    display: flex;
+    justify-content: space-between; /* spacing between list & button */
+    align-items: center;  /* vertical centering */
+    gap: 10px;
+}
+
+/* Keep list on left side */
+.book-row ul {
+    flex-grow: 1;
+    margin: 0;
+    padding-left: 18px;
+}
+
+/* Center the button vertically & horizontally in its area */
+.book-row .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    min-width: 130px; /* optional: fixed width for nicer alignment */
+}
+.center-btn {
+    text-align: center; /* center child inline elements */
+    margin-top: 20px; /* spacing from content above */
+}
