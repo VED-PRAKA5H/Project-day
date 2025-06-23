@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Library</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<h1>📚 My Library</h1>
+
+{% if book_data == [] %}
+<p style="text-align:center;">Library is empty.</p>
+{% else %}
+<ol>
+    {% for row in book_data %}
+    <li>
+<div class="book-row">
+    <ul>
+        {% for key, value in row.items() %}
+            {% if key != "ID" %}
+            <li><strong>{{ key }}:</strong> {{ value }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+    <a class="btn" href="{{ url_for('edit_rating', book_id=row.get('ID')) }}">✏ Update rating</a>
+</div>
+
+    </li>
+    {% endfor %}
+</ol>
+{% endif %}
+
+<br>
+<div class="center-btn">
+    <a class="btn" href="{{ url_for('add') }}">➕ Add New Book</a>
+</div>
+
+</body>
+</html>
+
