@@ -111,9 +111,7 @@ Visit: **http://127.0.0.1:5000/**
 ## ✏ Method Override for PUT/DELETE
 Since browsers only support **GET** & **POST** in standard forms,  
 PUT & DELETE are simulated using:
-```html
 
-```
 Then Flask handles it via `request.environ.get('override_method', request.method)`.
 
 ***
