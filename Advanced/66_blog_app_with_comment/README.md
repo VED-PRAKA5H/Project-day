@@ -55,18 +55,13 @@ project/
 ## 📦 Installation & Setup
 
 ### 1️⃣ Clone the Repository
-```bash
-git clone https://github.com/yourusername/flask-blog.git
-cd flask-blog
-```
 
 ### 2️⃣ Create a Virtual Environment & Activate
 ```bash
 python -m venv venv
 # Windows
 venv\Scripts\activate
-# macOS/Linux
-source venv/bin/activate
+
 ```
 
 ### 3️⃣ Install Dependencies
@@ -101,15 +96,15 @@ Visit: **http://127.0.0.1:5000/**
 
 ## 📋 API / Routes
 
-| Route                   | Methods       | Description |
-|-------------------------|--------------|-------------|
-| `/`                     | GET          | Home page with blogs |
-| `/about`                | GET          | About page |
-| `/contact`              | GET, POST    | Contact form |
-| `/post/`           | GET          | View single blog |
-| `/newpost`              | GET, POST    | Create new blog |
-| `/edit/`           | GET, POST    | Edit existing blog |
-| `/delete/`         | POST         | Delete blog post |
+| Route      | Methods   | Description          |
+|------------|-----------|----------------------|
+| `/`        | GET       | Home page with blogs |
+| `/about`   | GET       | About page           |
+| `/contact` | GET, POST | Contact form         |
+| `/post/`   | GET       | View single blog     |
+| `/newpost` | GET, POST | Create new blog      |
+| `/edit/`   | GET, POST | Edit existing blog   |
+| `/delete/` | POST      | Delete blog post     |
 
 ***
 
